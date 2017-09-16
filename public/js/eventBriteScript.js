@@ -3,6 +3,9 @@ var apiKey = 'DPQNSMGH5QBIBWDPNRZO';
 document.addEventListener('DOMContentLoaded', action);
 document.getElementById('query').focus();
 
+var form = document.getElementById("search-form"); // form
+form.reset();
+
 function action () {
   document.getElementById('searchbutton').addEventListener('click', function(event) {
 
@@ -69,16 +72,19 @@ function displayEvents(object) {
     var localDate = new Date(utcDate);
     var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
+    // Link to website to purchase ticket
+    var link = eventsArray.events[i].url;
+
     //localDate = localDate.toDateString();           // logs ex: Wed Jul 28 1993
 
     //Create HTML DOM Elements      
     var event = document.createElement('a'); //Preview node      
-    event.className = "list-group-item list-group-item-action"; //Set type  
+    event.className = "list-group-item list-group-item-action"; //Set type 
+    event.setAttribute("href", link);
     list.appendChild(event); 
 
     // Include image 
     var imageURL = eventsArray.events[i].logo.original.url;
-    console.log(imageURL);
     var image = document.createElement('img'); //Preview node  
     image.setAttribute("src", imageURL);
     image.setAttribute("width", "300");
