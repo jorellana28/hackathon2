@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 var meetupKeyID = '3b5cd41e32702b161a85e68646bb';  // Meet up API Key
-var eventBriteKeyID = 'DPQNSMGH5QBIBWDPNRZO ';        // EventBrite API key
+var eventBriteKeyID = 'DPQNSMGH5QBIBWDPNRZO';      // EventBrite API key
 
 app.use(function(req,res){
   res.status(404);
