@@ -9,7 +9,6 @@
     "body-parser": "^1.13.3",
     "clear": "0.0.1",
     "express": "^4.13.2",
-    "express-handlebars": "^2.0.1",
     "express-session": "^1.11.3",
     "handlebars-dateformat": "^1.0.1",
     "mysql": "^2.8.0"
