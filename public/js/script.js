@@ -5,7 +5,10 @@ document.getElementById('search-form').addEventListener('submit', getMeetUpEvent
 // Ajax request using search term to getPlaylist route
 function getMeetUpEvents(event) {
    var query = document.getElementById("query").value;
-   console.log("query");
+   var form = document.getElementById("search-form");
+   console.log(query);
+   form.reset();
+
    // var req = new XMLHttpRequest(); 
    // var url = "https://api.meetup.com/find/events" + query;
    // req.open("GET", url, true);
