@@ -6,10 +6,9 @@
   "repository": "",
   "author": "The Leftovers",
   "dependencies": {
-    "body-parser": "^1.13.3",
+    "body-parser": "^1.18.1",
     "clear": "0.0.1",
     "express": "^4.15.4",
-    "express-handlebars": "^2.0.1",
     "express-session": "^1.11.3",
     "handlebars-dateformat": "^1.0.1",
     "mysql": "^2.8.0"
