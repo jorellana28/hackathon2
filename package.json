@@ -1,13 +1,17 @@
 {
-  "name": "chat-example",
+  "name": "Tech meetups",
   "version": "0.0.0",
-  "description": "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.",
+  "description": "Hackathon Project",
   "main": "server.js",
   "repository": "",
-  "author": "Mostafa Eweda <mo.eweda@gmail.com>",
+  "author": "The Leftovrs",
   "dependencies": {
-    "async": "~0.2.8",
-    "express": "~3.2.4",
-    "socket.io": "~0.9.14"
+    "body-parser": "^1.13.3",
+    "clear": "0.0.1",
+    "express": "^4.13.2",
+    "express-handlebars": "^2.0.1",
+    "express-session": "^1.11.3",
+    "handlebars-dateformat": "^1.0.1",
+    "mysql": "^2.8.0"
   }
 }
