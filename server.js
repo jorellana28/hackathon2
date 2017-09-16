@@ -18,12 +18,12 @@ app.use(function(req,res){
   res.render('404');
 });
 
-app.get('/search', function(req, res) {
-  var context = {};
-  var artist = req.query.searchKey;
-
+// Search route
+// app.get('/search', function(req, res) {
+//   var context = {};
+//   var artist = req.query.searchKey;
  
-});
+// });
 
 app.use(function(err, req, res, next){
   console.error(err.stack);
