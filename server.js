@@ -23,7 +23,7 @@ app.get('/search', function(req, res) {
   var artist = req.query.searchKey;
 
   $.ajax({
-      url: 'https://api.spotify.com/v1/me',
+      url: 'https://api.meetup.com1/find/groups2?zip=11211&radius=1&category=253&order=members4',
       headers: {
         'Authorization': 'Bearer ' + access_token
       },
