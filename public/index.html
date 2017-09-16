@@ -1,28 +1,31 @@
 <!doctype html>
 <html lang="en" ng-app>
   <head>
-    <title>Tech Event Search Box</title>
+    <title>Tech Event Search</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">   
   </head>
   <body>
     <div class="container" style="margin-top: 8%;">
-     <form role="form" id="form-buscar">
-     <div class="form-group">
-     <div class="input-group">
-     <input id="query" class="form-control" type="text" name="search" placeholder="Location" required/>
-     <span class="input-group-btn">
-     <button class="btn btn-success" type="submit">
-     <i class="glyphicon glyphicon-search" aria-hidden="true"></i> Search
-     </button>
-     </span>
-     </div>
-     </div>
+
+    <!--  Search form -->
+     <form role="form" id="search-form">
+      <div class="form-group">
+       <div class="input-group">
+         <input id="query" class="form-control" type="text" name="search" placeholder="Location" required/>
+         <span class="input-group-btn">
+         <button id="searchbutton" class="btn btn-success" type="submit">
+         <i class="glyphicon glyphicon-search" aria-hidden="true"></i>Search</button>
+         </span>
+        </div>
+      </div>
      </form>
-    </div>            
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+
+    </div> 
+
+    <script src="js/script.js"></script>            
   </body>
 </html>

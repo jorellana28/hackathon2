@@ -22,18 +22,7 @@ app.get('/search', function(req, res) {
   var context = {};
   var artist = req.query.searchKey;
 
-  $.ajax({
-      url: 'https://api.meetup.com1/find/groups2?zip=11211&radius=1&category=253&order=members4',
-      headers: {
-        'Authorization': 'Bearer ' + access_token
-      },
-      success: function(response) {
-        userProfilePlaceholder.innerHTML = userProfileTemplate(response);
-        $('#login').hide();
-        $('#loggedin').show();
-      }
-  });
-
+ 
 });
 
 app.use(function(err, req, res, next){
