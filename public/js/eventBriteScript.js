@@ -51,10 +51,6 @@ function displayEvents(object) {
   //console.log(length);
   //console.log(eventsArray.events[0].name.text);
 
-
-
-  
-
   var listArea = document.getElementById("listContent");
 
   //Create the list
@@ -77,9 +73,23 @@ function displayEvents(object) {
 
     //Create HTML DOM Elements      
     var event = document.createElement('a'); //Preview node      
-    event.className = "list-group-item list-group-item-action"; //Set type      
-    event.textContent = eventsArray.events[i].name.text;   
+    event.className = "list-group-item list-group-item-action"; //Set type  
     list.appendChild(event); 
+
+    // Include image 
+    var imageURL = eventsArray.events[i].logo.original.url;
+    console.log(imageURL);
+    var image = document.createElement('img'); //Preview node  
+    image.setAttribute("src", imageURL);
+    image.setAttribute("width", "300");
+    event.appendChild(image); 
+
+    var breakLine = document.createElement('br');
+    event.appendChild(breakLine);
+
+    var name = document.createElement('span');
+    name.textContent = eventsArray.events[i].name.text;   
+    event.appendChild(name); 
 
     var breakLine = document.createElement('br');
     event.appendChild(breakLine);
