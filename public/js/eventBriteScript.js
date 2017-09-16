@@ -102,6 +102,9 @@ function displayEvents(object) {
 
     var eventDate = document.createElement('span');        
     eventDate.textContent += localDate.toLocaleDateString('en-US', options);
+
+    console.log(eventsArray.events.url);
+
     event.appendChild(eventDate);      
   } 
   
