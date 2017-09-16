@@ -18,6 +18,24 @@ app.use(function(req,res){
   res.render('404');
 });
 
+app.get('/search', function(req, res) {
+  var context = {};
+  var artist = req.query.searchKey;
+
+  $.ajax({
+      url: 'https://api.spotify.com/v1/me',
+      headers: {
+        'Authorization': 'Bearer ' + access_token
+      },
+      success: function(response) {
+        userProfilePlaceholder.innerHTML = userProfileTemplate(response);
+        $('#login').hide();
+        $('#loggedin').show();
+      }
+  });
+
+});
+
 app.use(function(err, req, res, next){
   console.error(err.stack);
   res.status(500);
