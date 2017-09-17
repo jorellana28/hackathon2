@@ -85,7 +85,7 @@ function displayEvents(object) {
 
     //localDate = localDate.toDateString();           // logs ex: Wed Jul 28 1993
 
-    //Create HTML DOM Elements      
+    //Create HTML DOM Elements 
     var event = document.createElement('a'); //Preview node      
     event.className = "list-group-item list-group-item-action"; //Set type 
     event.setAttribute("href", link);
