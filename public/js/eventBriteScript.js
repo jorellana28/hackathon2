@@ -6,12 +6,14 @@ document.getElementById('query').focus();
 var form = document.getElementById("search-form"); // form
 form.reset();
 
+document.getElementById("resultsMssg").innerHTML = "";
 
 function action () {
   document.getElementById('searchbutton').addEventListener('click', function(event) {
 
     if (document.getElementById("listContent"));
       document.getElementById("listContent").remove();
+    
 
     var req = new XMLHttpRequest();
 
@@ -21,9 +23,8 @@ function action () {
     var sort = 'date';
     var url = "https://www.eventbriteapi.com/v3/events/search/?q=" + category + "&sort_by=" + sort + "&location.address=" + location + "&location.within=" + distance + "&token=" + apiKey;
 
-    document.getElementById('searchbutton').addEventListener("click", function(){
-    document.getElementById("resultsMssg").innerHTML = "Events in " + "'" + location + "'";
-    });
+    document.getElementById("resultsMssg").innerHTML = "Showing results in " + '"' + location + '"';
+   
 
     req.open('GET', url, true);
 
