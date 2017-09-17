@@ -55,7 +55,13 @@ function displayEvents(object) {
     event.setAttribute("href", eventsArray[i].event_url);
 
     // Include image 
-    var imageURL = "http://via.placeholder.com/300";
+    if (eventsArray[i].group.group_photo){
+      var imageURL = eventsArray[i].group.group_photo.photo_link;
+    } else {
+      console.log('the property is not available...'); 
+      var imageURL = "http://icons.iconarchive.com/icons/danleech/simple/1024/meetup-icon.png";
+    }
+
     var image = document.createElement('img'); //Preview node  
     image.setAttribute("src", imageURL);
     image.setAttribute("width", "300");
