@@ -6,6 +6,10 @@ document.getElementById('query').focus();
 var form = document.getElementById("search-form"); // form
 form.reset();
 
+document.getElementById('searchbutton').addEventListener("click", function(){
+document.getElementById("resultsMssg").innerHTML = "Results";
+});
+
 function action () {
   document.getElementById('searchbutton').addEventListener('click', function(event) {
 
@@ -32,7 +36,7 @@ function action () {
 
       info.appendChild(newDiv);
 
-        displayEvents(response);
+      displayEvents(response);
     }
     else {
       console.log("Error in network request: " + req.statusText);
