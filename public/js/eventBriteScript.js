@@ -88,7 +88,12 @@ function displayEvents(object) {
     list.appendChild(event); 
 
     // Include image 
-    var imageURL = eventsArray.events[i].logo.original.url;
+    if (eventsArray.events[i].logo){
+      var imageURL = eventsArray.events[i].logo.original.url;
+    } else {
+      console.log('the property is not available...'); 
+    }
+
     var image = document.createElement('img'); //Preview node  
     image.setAttribute("src", imageURL);
     image.setAttribute("width", "200");
