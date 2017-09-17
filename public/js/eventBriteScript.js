@@ -125,7 +125,16 @@ function displayEvents(object) {
 
     console.log(eventsArray.events.url);
 
-    event.appendChild(eventDate);      
+    event.appendChild(eventDate); 
+
+    var breakLine = document.createElement('br');
+    event.appendChild(breakLine);
+    
+    var eventDescription = document.createElement('span');
+    eventDescription.setAttribute("class", "eventInfo");
+    eventDescription.setAttribute("id", "eventDescription");
+    eventDescription.textContent = eventsArray.events[i].description.text;
+    event.appendChild(eventDescription);  
   } 
   
   listArea.appendChild(list)
