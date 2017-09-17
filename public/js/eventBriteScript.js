@@ -8,6 +8,8 @@ form.reset();
 
 document.getElementById("resultsMssg").innerHTML = "";
 
+
+
 function action () {
   document.getElementById('searchbutton').addEventListener('click', function(event) {
 
@@ -41,7 +43,9 @@ function action () {
 
       displayEvents(response);
 
-      document.getElementById("resultsMssg").innerHTML = "Showing " + response.pagination.object_count + " events in " + '"' + location + '"';
+      var e = document.getElementById(distanceForm).value;
+      var strUser = e.options[e.selectedIndex].value;
+      document.getElementById("resultsMssg").innerHTML = "Showing " + response.pagination.object_count + " events within " + e + " mi of " + '"' + location + '"';
     }
     else {
       console.log("Error in network request: " + req.statusText);
@@ -94,7 +98,7 @@ function displayEvents(object) {
     event.setAttribute("href", link);
     list.appendChild(event); 
 
-    // Include image 
+    //Include image 
     if (eventsArray.events[i].logo){
       var imageURL = eventsArray.events[i].logo.original.url;
     } else {
@@ -110,6 +114,7 @@ function displayEvents(object) {
     var breakLine = document.createElement('br');
     event.appendChild(breakLine);
 
+    //Include event name
     var name = document.createElement('span');
     name.setAttribute("class", "eventInfo");
     name.textContent = eventsArray.events[i].name.text;  
@@ -119,23 +124,50 @@ function displayEvents(object) {
     var breakLine = document.createElement('br');
     event.appendChild(breakLine);
 
+    //Include event date
     var eventDate = document.createElement('span'); 
     eventDate.setAttribute("class", "eventInfo");  
     eventDate.setAttribute("id", "eventDate");      
     eventDate.textContent += localDate.toLocaleDateString('en-US', options);
 
     console.log(eventsArray.events.url);
-
+    
     event.appendChild(eventDate); 
-
     var breakLine = document.createElement('br');
     event.appendChild(breakLine);
     
+    //Include event description
     var eventDescription = document.createElement('p');
     eventDescription.setAttribute("class", "eventInfo");
     eventDescription.setAttribute("id", "eventDescription");
     eventDescription.textContent = eventsArray.events[i].description.text;
-    event.appendChild(eventDescription);  
+    
+    event.appendChild(eventDescription); 
+    var breakLine = document.createElement('br');
+    event.appendChild(breakLine);
+    
+    //Include event cost
+    var eventCost = document.createElement('span');
+    eventCost.setAttribute("class", "eventInfo");
+    eventCost.setAttribute("id", "eventCost");
+    if(eventsArray.events[i].is_free == "true"){
+      eventCost.textContent = "FREE";
+    }
+    else{
+      eventCost.textContent = "Requires a paid ticket";
+    }
+
+    event.appendChild(eventCost);
+    var breakLine = document.createElement('br');
+    event.appendChild(breakLine);
+
+    /*Include event distance from query
+   var eventLocation = document.createElement('span');
+   eventLocation.setAttribute("class", "eventInfo");
+   eventLocation.setAttribute("id", "eventLocation");
+   eventLocation.textContent = eventsArray.events[i].currency;
+
+   event.appendChild(eventLocation);*/
   } 
   
   listArea.appendChild(list)

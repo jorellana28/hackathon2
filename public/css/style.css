@@ -93,6 +93,7 @@ img {
 .eventInfo {
   clear: right;
   padding-left: 12px;
+  overflow: hidden;
 }
 
 #eventName {
@@ -109,7 +110,26 @@ img {
 #eventDescription {
   display: block;
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
 }
+#eventDescription:hover {
+  clear: right;
+  padding-left: 12px;
+  overflow: visible;
+  text-overflow: inherit;
+  white-space: normal;
+  margin-left: 200px;
+}
 
+#eventCost {
+  color:blue;
+  border: red;
+}
+
+.custom-select {
+  color: blue;
+}
+
+#distanceForm {
+  width: 150px;
+}
