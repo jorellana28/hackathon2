@@ -108,15 +108,17 @@ function displayEvents(object) {
     event.appendChild(breakLine);
 
     var name = document.createElement('span');
-    name.setAttribute("id", "eventInfo");
-    name.textContent = eventsArray.events[i].name.text;   
+    name.setAttribute("class", "eventInfo");
+    name.textContent = eventsArray.events[i].name.text;  
+    name.setAttribute("id", "eventName"); 
     event.appendChild(name); 
 
     var breakLine = document.createElement('br');
     event.appendChild(breakLine);
 
     var eventDate = document.createElement('span'); 
-    eventDate.setAttribute("id", "eventInfo");       
+    eventDate.setAttribute("class", "eventInfo");  
+    eventDate.setAttribute("id", "eventDate");      
     eventDate.textContent += localDate.toLocaleDateString('en-US', options);
 
     console.log(eventsArray.events.url);

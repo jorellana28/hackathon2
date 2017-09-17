@@ -24,26 +24,27 @@
   </head>
   
   <body>
+    
     <div class="page-header">
       <h1 class="heading">Tech Event Finder</h1>
     </div> 
 
-    <div class="container" id="information" style="margin-top: 8%;">
-      <h3>Search for a tech event in any location</h3>
-      <!--  Search form -->
-
-      <form role="form" id="search-form">
-        <div class="form-group">
-          <div class="input-group">
-            <input id="query" class="form-control" type="text" name="search" placeholder="City" required/>
-            <span class="input-group-btn">
-            <button id="searchbutton" class="btn btn-secondary" type="submit">
-            <i class="glyphicon glyphicon-search" aria-hidden="true"></i>Search</button>
-            </span>
+    <div class="container" id="information" style="margin-top: 2%;">
+      <div id="searchBox">
+        <h3>Search for a tech event in any location</h3>
+        <!--  Search form -->
+        <form role="form" id="search-form">
+          <div class="form-group">
+            <div class="input-group">
+              <input id="query" class="form-control" type="text" name="search" placeholder="City" required/>
+              <span class="input-group-btn">
+              <button id="searchbutton" class="btn btn-secondary" type="submit">
+              <i class="glyphicon glyphicon-search" aria-hidden="true"></i>Search</button>
+              </span>
+            </div>
           </div>
-        </div>
-      </form>
-
+        </form>
+      </div>
       <!-- Display results -->  
       <h3 id="resultsMssg"></h3>
 
