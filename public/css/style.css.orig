@@ -134,5 +134,9 @@ img {
 
 #distanceForm {
   width: 150px;
+<<<<<<< HEAD
+}
+=======
 
 }
+>>>>>>> 04e403d4a9ea052aa550d413d062654652b7b288
