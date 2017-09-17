@@ -99,11 +99,8 @@ img {
 }
 
 #eventDescription {
-  clear: both;
-  margin: 15px;
-  text-align: justify;
   
-  display:block; 
+  display: block; 
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
