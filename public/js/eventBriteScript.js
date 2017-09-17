@@ -18,11 +18,13 @@ function action () {
 
     }
 
+    var e = document.getElementById("distanceForm");
+    var strUser = e.value;
 
     var req = new XMLHttpRequest();
 
     var location = document.getElementById('query').value;
-    var distance = '100mi';
+    var distance = strUser + 'mi';
     var category = 'hackathon';
     var sort = 'date';
     var url = "https://www.eventbriteapi.com/v3/events/search/?q=" + category + "&sort_by=" + sort + "&location.address=" + location + "&location.within=" + distance + "&token=" + apiKey;
@@ -43,8 +45,7 @@ function action () {
 
       displayEvents(response);
 
-      var e = document.getElementById("distanceForm");
-      var strUser = e.value;
+      
       document.getElementById("resultsMssg").innerHTML = "Showing " + response.pagination.object_count + " events within " + strUser + " mi of " + '"' + location + '"';
     }
     else {
