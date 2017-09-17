@@ -91,20 +91,23 @@ function displayEvents(object) {
     var imageURL = eventsArray.events[i].logo.original.url;
     var image = document.createElement('img'); //Preview node  
     image.setAttribute("src", imageURL);
-    image.setAttribute("width", "300");
+    image.setAttribute("width", "200");
+    image.setAttribute("height", "200");
     event.appendChild(image); 
 
     var breakLine = document.createElement('br');
     event.appendChild(breakLine);
 
     var name = document.createElement('span');
+    name.setAttribute("id", eventInfo);
     name.textContent = eventsArray.events[i].name.text;   
     event.appendChild(name); 
 
     var breakLine = document.createElement('br');
     event.appendChild(breakLine);
 
-    var eventDate = document.createElement('span');        
+    var eventDate = document.createElement('span'); 
+    eventDate.setAttribute("id", eventInfo);       
     eventDate.textContent += localDate.toLocaleDateString('en-US', options);
 
     console.log(eventsArray.events.url);
