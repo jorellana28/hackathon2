@@ -64,3 +64,13 @@ img {
   border-style:;
   border-radius: 15px 50px:
 }
+
+div#fixedheader {
+  position:relative;
+  top:0px;
+  left:0px;
+  width:100%;
+  color:#CCC;
+  background:#333;
+  padding:20px;
+}
