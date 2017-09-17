@@ -84,7 +84,7 @@ img {
 
 .eventInfo {
   clear: right;
-  margin-left: 12px;
+  padding-left: 12px;
 }
 
 #eventName {

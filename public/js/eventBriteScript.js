@@ -130,7 +130,7 @@ function displayEvents(object) {
     var breakLine = document.createElement('br');
     event.appendChild(breakLine);
     
-    var eventDescription = document.createElement('span');
+    var eventDescription = document.createElement('p');
     eventDescription.setAttribute("class", "eventInfo");
     eventDescription.setAttribute("id", "eventDescription");
     eventDescription.textContent = eventsArray.events[i].description.text;
