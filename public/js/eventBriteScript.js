@@ -74,6 +74,8 @@ function displayEvents(object) {
   // Build list
   for (var i = 0; i < length; i++) { 
 
+    //var eventInfo = document.createElement('div');
+    //eventInfo.setAttribute("id", "eventBlock");
     // Format Date
     // logs ex: ‎Friday‎, ‎September‎ ‎22‎, ‎2017
     var utcDate = eventsArray.events[i].start.utc;  // ISO-8601 formatted date returned from server
