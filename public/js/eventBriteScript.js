@@ -25,7 +25,6 @@ function action () {
     var sort = 'date';
     var url = "https://www.eventbriteapi.com/v3/events/search/?q=" + category + "&sort_by=" + sort + "&location.address=" + location + "&location.within=" + distance + "&token=" + apiKey;
 
-    document.getElementById("resultsMssg").innerHTML = "Showing results in " + '"' + location + '"';
    
 
     req.open('GET', url, true);
@@ -41,6 +40,8 @@ function action () {
       info.appendChild(newDiv);
 
       displayEvents(response);
+
+      document.getElementById("resultsMssg").innerHTML = "Showing " + response.pagination.object_count + " events in " + '"' + location + '"';
     }
     else {
       console.log("Error in network request: " + req.statusText);
