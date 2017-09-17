@@ -52,3 +52,15 @@ h1 {
   position: relative;
   text-align: center;
 }
+img {
+ float: left;
+ vertical-align: text-top;
+  
+}
+#eventInfo {
+    clear: right;
+}
+#listContent {
+  border-style:;
+  border-radius: 15px 50px:
+}
