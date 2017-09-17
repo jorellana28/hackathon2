@@ -11,9 +11,11 @@ document.getElementById("resultsMssg").innerHTML = "";
 function action () {
   document.getElementById('searchbutton').addEventListener('click', function(event) {
 
-    if (document.getElementById("listContent"));
+    if (document.getElementById("listContent")) {
       document.getElementById("listContent").remove();
-    
+
+    }
+
 
     var req = new XMLHttpRequest();
 
