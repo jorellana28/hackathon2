@@ -5,7 +5,7 @@
 }
 #logo {
 color: #666;
-width:100%;   
+width:100%;
 }
 #logo h1 {
     font-size: 60px;
@@ -23,21 +23,21 @@ width:100%;
     height: 40px;
 }
 #form-buscar >.form-group >.input-group > .input-group-btn > .btn{
-        height: 40px; 
+        height: 40px;
         font-size: 16px;
-        font-weight: 300; 
-         
-       
+        font-weight: 300;
+
+
 }
 #form-buscar >.form-group >.input-group > .input-group-btn > .btn .glyphicon{
- margin-right:12px;   
-}    
+ margin-right:12px;
+}
 
 
 #form-buscar >.form-group >.input-group > .form-control {
     font-size: 16px;
     font-weight: 300;
-   
+
 }
 
 #form-buscar >.form-group >.input-group > .form-control:focus {
@@ -45,10 +45,6 @@ width:100%;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 1px rgba(0, 109, 0, 0.8);
           box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 1px rgba(0, 109, 0, 0.8);
-}
-
-#search-form {
-  padding: 0px 20px 20px 20px;
 }
 
 .page-header {
@@ -73,14 +69,24 @@ h1 {
 img {
  float: left;
  vertical-align: text-top;
-  
+
 }
 #searchBox {
   background-color: rgb(220,230, 230);
   height: 150px;
   width: 100%;
-  border-radius: 50px 50px 50px 50px;
+  border-radius: 7px !important;
 }
+#searchbutton {
+  border-radius: 0px 4px 4px 0px !important;
+  width: 100px;
+}
+#search-form {
+  padding: 0px 20px 20px 20px;
+  border-radius: 4px 0px 0px 4px !important;
+}
+
+
 .eventInfo {
     clear: right;
     margin-left: 12px;
