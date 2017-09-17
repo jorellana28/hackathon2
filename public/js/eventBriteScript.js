@@ -43,9 +43,9 @@ function action () {
 
       displayEvents(response);
 
-      var e = document.getElementById(distanceForm).value;
-      var strUser = e.options[e.selectedIndex].value;
-      document.getElementById("resultsMssg").innerHTML = "Showing " + response.pagination.object_count + " events within " + e + " mi of " + '"' + location + '"';
+      var e = document.getElementById("distanceForm");
+      var strUser = e.value;
+      document.getElementById("resultsMssg").innerHTML = "Showing " + response.pagination.object_count + " events within " + strUser + " mi of " + '"' + location + '"';
     }
     else {
       console.log("Error in network request: " + req.statusText);
