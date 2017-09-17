@@ -99,7 +99,7 @@ img {
 }
 
 #eventDescription {
-  
+  width: 500px;
   display: block; 
   white-space: nowrap;
   overflow: hidden;
