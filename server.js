@@ -15,10 +15,16 @@ app.use(function(req, res, next) {
 	next();
 }); 
 
-app.use(express.static('public'));
+// Statc middleware
+app.use(express.static(__dirname + '/public'));
 
-var meetupKeyID = '3b5cd41e32702b161a85e68646bb';  // Meet up API Key
-var eventBriteKeyID = 'DPQNSMGH5QBIBWDPNRZO';      // EventBrite API key
+//var meetupKeyID = '3b5cd41e32702b161a85e68646bb';  // Meet up API Key
+//var eventBriteKeyID = 'DPQNSMGH5QBIBWDPNRZO';      // EventBrite API key
+
+// Route to index.html
+app.use(function(req, res) {
+    res.send('index.html');
+});
 
 app.use(function(req,res){
   res.status(404);
