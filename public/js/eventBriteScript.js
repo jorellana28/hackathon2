@@ -6,9 +6,6 @@ document.getElementById('query').focus();
 var form = document.getElementById("search-form"); // form
 form.reset();
 
-document.getElementById('searchbutton').addEventListener("click", function(){
-document.getElementById("resultsMssg").innerHTML = "Results";
-});
 
 function action () {
   document.getElementById('searchbutton').addEventListener('click', function(event) {
@@ -23,6 +20,10 @@ function action () {
     var category = 'hackathon';
     var sort = 'date';
     var url = "https://www.eventbriteapi.com/v3/events/search/?q=" + category + "&sort_by=" + sort + "&location.address=" + location + "&location.within=" + distance + "&token=" + apiKey;
+
+    document.getElementById('searchbutton').addEventListener("click", function(){
+    document.getElementById("resultsMssg").innerHTML = "Events in " + "'" + location + "'";
+    });
 
     req.open('GET', url, true);
 
@@ -96,20 +97,23 @@ function displayEvents(object) {
 
     var image = document.createElement('img'); //Preview node  
     image.setAttribute("src", imageURL);
-    image.setAttribute("width", "300");
+    image.setAttribute("width", "200");
+    image.setAttribute("height", "200");
     event.appendChild(image); 
 
     var breakLine = document.createElement('br');
     event.appendChild(breakLine);
 
     var name = document.createElement('span');
+    name.setAttribute("id", "eventInfo");
     name.textContent = eventsArray.events[i].name.text;   
     event.appendChild(name); 
 
     var breakLine = document.createElement('br');
     event.appendChild(breakLine);
 
-    var eventDate = document.createElement('span');        
+    var eventDate = document.createElement('span'); 
+    eventDate.setAttribute("id", "eventInfo");       
     eventDate.textContent += localDate.toLocaleDateString('en-US', options);
 
     console.log(eventsArray.events.url);
