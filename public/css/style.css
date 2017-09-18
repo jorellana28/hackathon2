@@ -1,6 +1,7 @@
 * {
-  -webkit-border-radius: 4px !important;
-     -moz-border-radius: 4px !important;
+  -webkit-border-radius: 1px !important;
+     -moz-border-radius: 1px !important;
+          border-radius: 1px !important;
 }
 #logo {
 color: #666;
@@ -21,9 +22,6 @@ width:100%;
 #search-form >.form-group >.input-group > .form-control {
     height: 40px;
     border-radius: 4px 4px 4px 4px !important;
-}
-#distanceForm >.custom-select {
-  border-radius: 4px 4px 4px 4px !important;
 }
 
 #form-buscar >.form-group >.input-group > .input-group-btn > .btn{
@@ -59,7 +57,6 @@ width:100%;
   text-align: center;
   padding-top: 75px;
   color: white;
-  border-radius: 1px !important;
 }
 h1 {
   position: relative;
@@ -74,6 +71,7 @@ h1 {
 img {
  float: left;
  vertical-align: text-top;
+ padding-top: 30px;
 
 }
 #searchBox {
@@ -99,17 +97,20 @@ img {
 .list-group-item:hover .resultImages {
   width: 300px;
   height: 300px;
+
 }
 .eventInfo {
   clear: right;
-  padding-left: 12px;
   overflow: hidden;
+  padding: 0 12px;
+  -webkit-box-decoration-break: clone;
 }
 
 #eventName {
   color: rgb(81, 137, 250);
   font-weight: bold;
   font-size: 22px;
+  vertical-align: top;
 }
 
 #eventDate {
@@ -136,13 +137,19 @@ img {
 }
 
 .list-group-item {
-  transition: height 0.2s;
+}
+.list-group-item:hover {
+  
 }
 .list-group-item:hover #eventDescription{
-  clear: right;
   padding-left: 12px;
   overflow: visible;
   text-overflow: inherit;
   white-space: normal;
   margin-left: 300px;
+}
+
+.list-group-item:hover #eventCost {
+  margin-left: 300px;
+  text-align: left;
 }
