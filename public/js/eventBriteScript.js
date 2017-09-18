@@ -141,21 +141,6 @@ function action () {
     event.appendChild(eventDescription); 
     var breakLine = document.createElement('br');
     event.appendChild(breakLine);
-    
-    //Include event cost
-    var eventCost = document.createElement('span');
-    eventCost.setAttribute("class", "eventInfo");
-    eventCost.setAttribute("id", "eventCost");
-    if(eventsArray.events[i].is_free == "true"){
-      eventCost.textContent = "FREE";
-    }
-    else{
-      eventCost.textContent = "Requires a paid ticket";
-    }
-
-    event.appendChild(eventCost);
-    var breakLine = document.createElement('br');
-    event.appendChild(breakLine);
   } 
   
   listArea.appendChild(list)

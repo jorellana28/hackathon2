@@ -95,8 +95,8 @@ img {
 }
 
 .list-group-item:hover .resultImages {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 280px;
 
 }
 .eventInfo {
@@ -124,10 +124,6 @@ img {
   text-overflow: ellipsis;
 }
 
-#eventCost {
-  color: rgb(255, 102, 102);
-}
-
 #distanceForm {
   width: 150px;
 
@@ -139,17 +135,23 @@ img {
 .list-group-item {
 }
 .list-group-item:hover {
-  
+  height: 300px;
 }
 .list-group-item:hover #eventDescription{
   padding-left: 12px;
-  overflow: visible;
   text-overflow: inherit;
   white-space: normal;
-  margin-left: 300px;
+  margin-left: 10px;
+  height: 195px;
 }
 
-.list-group-item:hover #eventCost {
-  margin-left: 300px;
-  text-align: left;
+.list-group-item:hover:after {
+  content: "";
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: 35px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(248, 248, 248, 1) 50%);
 }
