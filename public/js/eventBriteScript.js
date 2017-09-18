@@ -46,7 +46,7 @@ function action () {
       displayEvents(response);
 
       
-      document.getElementById("resultsMssg").innerHTML = "Showing " + response.pagination.object_count + " events within " + strUser + " mi of " + '"' + location + '"';
+      document.getElementById("resultsMssg").innerHTML = "Showing " + response.pagination.object_count + " events within " + strUser + " miles of " + '"' + location + '"';
     }
     else {
       console.log("Error in network request: " + req.statusText);
@@ -59,14 +59,12 @@ function action () {
 }
 
 // Append to list
-function displayEvents(object) {
+  function displayEvents(object) {
   var eventsArray = object;  
   var length = eventsArray.events.length;
 
   /* PRINT INFO ONTO CONSOLE */
   console.log(eventsArray);
-  //console.log(length);
-  //console.log(eventsArray.events[0].name.text);
 
   var listArea = document.getElementById("listContent");
 
@@ -80,8 +78,6 @@ function displayEvents(object) {
   // Build list
   for (var i = 0; i < length; i++) { 
 
-    //var eventInfo = document.createElement('div');
-    //eventInfo.setAttribute("id", "eventBlock");
     // Format Date
     // logs ex: ‎Friday‎, ‎September‎ ‎22‎, ‎2017
     var utcDate = eventsArray.events[i].start.utc;  // ISO-8601 formatted date returned from server
@@ -91,12 +87,9 @@ function displayEvents(object) {
     // Link to website to purchase ticket
     var link = eventsArray.events[i].url;
 
-    //localDate = localDate.toDateString();           // logs ex: Wed Jul 28 1993
-
     //Create HTML DOM Elements 
     var event = document.createElement('span'); //Preview node      
     event.className = "list-group-item list-group-item-action"; //Set type 
-    //event.setAttribute("href", link);
     list.appendChild(event); 
 
     //Include image 
@@ -163,14 +156,6 @@ function displayEvents(object) {
     event.appendChild(eventCost);
     var breakLine = document.createElement('br');
     event.appendChild(breakLine);
-
-    /*Include event distance from query
-   var eventLocation = document.createElement('span');
-   eventLocation.setAttribute("class", "eventInfo");
-   eventLocation.setAttribute("id", "eventLocation");
-   eventLocation.textContent = eventsArray.events[i].currency;
-
-   event.appendChild(eventLocation);*/
   } 
   
   listArea.appendChild(list)
