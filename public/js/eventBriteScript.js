@@ -94,9 +94,9 @@ function displayEvents(object) {
     //localDate = localDate.toDateString();           // logs ex: Wed Jul 28 1993
 
     //Create HTML DOM Elements 
-    var event = document.createElement('a'); //Preview node      
+    var event = document.createElement('span'); //Preview node      
     event.className = "list-group-item list-group-item-action"; //Set type 
-    event.setAttribute("href", link);
+    //event.setAttribute("href", link);
     list.appendChild(event); 
 
     //Include image 
@@ -108,6 +108,7 @@ function displayEvents(object) {
 
     var image = document.createElement('img'); //Preview node  
     image.setAttribute("src", imageURL);
+    image.setAttribute("class", "resultImages")
     image.setAttribute("width", "200");
     image.setAttribute("height", "200");
     event.appendChild(image); 
@@ -116,7 +117,8 @@ function displayEvents(object) {
     event.appendChild(breakLine);
 
     //Include event name
-    var name = document.createElement('span');
+    var name = document.createElement('a');
+    name.setAttribute("href", link);
     name.setAttribute("class", "eventInfo");
     name.textContent = eventsArray.events[i].name.text;  
     name.setAttribute("id", "eventName"); 
